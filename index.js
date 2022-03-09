@@ -239,91 +239,155 @@ Use the getRandomFlavors function and new arrays below to do the following:
   For example: getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors) might return ["Strawberry Cheesecake", "Eggnog,"..."Chocolate"].
 */
 
+// REDECLARING ORIGINALFLAVORS BECAUSE I MUTATED IT BEFORE
 
-function getRandomFlavors() {
-  /*code here*/
-}
+const ogFlavors = [
+  "Banana Nut Fudge",
+  "Black Walnut",
+  "Burgundy Cherry",
+  "Butterscotch Ribbon",
+  "Cherry Macaron",
+  "Chocolate",
+  "Chocolate Almond",
+  "Chocolate Chip",
+  "Chocolate Fudge",
+  "Chocolate Mint",
+  "Chocolate Ribbon",
+  "Coffee",
+  "Coffee Candy",
+  "Date Nut",
+  "Eggnog",
+  "French Vanilla",
+  "Green Mint Stick",
+  "Lemon Crisp",
+  "Lemon Custard",
+  "Lemon Sherbet",
+  "Maple Nut",
+  "Orange Sherbet",
+  "Peach",
+  "Peppermint Fudge Ribbon",
+  "Peppermint Stick",
+  "Pineapple Sherbet",
+  "Raspberry Sherbet",
+  "Rocky Road",
+  "Strawberry",
+  "Vanilla",
+  "Vanilla Burnt Almond"
+]
+
 
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
-// const newFlavors = [
-//   "Date night",
-//   "U.S.S Butterscotch (Stranger Things special)",
-//   "Honey Almond",
-//   "Mint Chocolate Chip",
-//   "Chocolate",
-//   "Oreo® Cookies'n Cream",
-//   "Chocolate Chip",
-//   "Pralines 'n Cream",
-//   "Very Berry Strawberry",
-//   "Chocolate Chip Cookie Dough",
-//   "Old Fashioned Butter Pecan",
-//   "Jamoca®",
-//   "Jamoca® Almond Fudge",
-//   "Reese's® Peanut Butter Cup",
-//   "Rocky Road",
-//   "Peanut Butter ’n Chocolate",
-//   "Gold Medal Ribbon®",
-//   "World Class® Chocolate",
-//   "Cherries Jubilee",
-//   "Chocolate Fudge",
-//   "Daiquiri Ice",
-//   "Rainbow Sherbet",
-//   "Rainbow Swirl"
-// ] 
+ const newFlavors = [
+   "Date night",
+   "U.S.S Butterscotch (Stranger Things special)",
+   "Honey Almond",
+   "Mint Chocolate Chip",
+   "Chocolate",
+   "Oreo® Cookies'n Cream",
+   "Chocolate Chip",
+   "Pralines 'n Cream",
+   "Very Berry Strawberry",
+   "Chocolate Chip Cookie Dough",
+   "Old Fashioned Butter Pecan",
+   "Jamoca®",
+   "Jamoca® Almond Fudge",
+   "Reese's® Peanut Butter Cup",
+   "Rocky Road",
+   "Peanut Butter ’n Chocolate",
+   "Gold Medal Ribbon®",
+   "World Class® Chocolate",
+   "Cherries Jubilee",
+   "Chocolate Fudge",
+   "Daiquiri Ice",
+   "Rainbow Sherbet",
+   "Rainbow Swirl"
+ ] 
 
-// const seasonalFlavors = [
-//   "America's Birthday Cake",
-//   "Baseball Nut®",
-//   "Blueberry Cheesecake",
-//   "Bourbon Street Pecan Pie",
-//   "Brownie Bar Mashup",
-//   "Cherry Cordial with Kisses",
-//   "Chocolate Mousse Royale",
-//   "French Vanilla",
-//   "Eggnog",
-//   "German Chocolate Cake",
-//   "Icing on the Cake",
-//   "Love Potion #31",
-//   "New York Cheesecake",
-//   "Nutty Coconut",
-//   "Peppermint",
-//   "Strawberry Cheesecake",
-//   "Rock ’n Pop Swirl",
-//   "Reese’s Peanut Butter Cup",
-//   "Trick Oreo Treat",
-//   "Winter White Chocolate",
-//   "made with Snickers®",
-//   "made with M&M's®",
-//   "Heath®",
-//   "Mango Tango"
-// ]
+ const seasonalFlavors = [
+   "America's Birthday Cake",
+   "Baseball Nut®",
+   "Blueberry Cheesecake",
+   "Bourbon Street Pecan Pie",
+   "Brownie Bar Mashup",
+   "Cherry Cordial with Kisses",
+   "Chocolate Mousse Royale",
+   "French Vanilla",
+   "Eggnog",
+   "German Chocolate Cake",
+   "Icing on the Cake",
+   "Love Potion #31",
+   "New York Cheesecake",
+   "Nutty Coconut",
+   "Peppermint",
+   "Strawberry Cheesecake",
+   "Rock ’n Pop Swirl",
+   "Reese’s Peanut Butter Cup",
+   "Trick Oreo Treat",
+   "Winter White Chocolate",
+   "made with Snickers®",
+   "made with M&M's®",
+   "Heath®",
+   "Mango Tango"
+ ]
 
-// const regionalFlavors = [
-//   "Pink Bubblegum",
-//   "Caramel Macchiato",
-//   "York Peppermint Pattie",
-//   "Cotton Candy",
-//   "Orange Sherbet",
-//   "Grape Ice",
-//   "Watermelon Ice",
-//   "Miami Vice Sorbet",
-//   "Splish Splash®",
-//   "Wild 'n Reckless Sherbet",
-//   "Lemon Custard",
-//   "Oregon Blackberry",
-//   "Bananas ‘n Strawberries",
-//   "Mississippi Mud",
-//   "Rum Raisin",
-//   "Creole Cream Cheese",
-//   "Chocolate Almond",
-//   "Fudge Brownie",
-//   "Banana Nut",
-//   "Black Walnut",
-//   "Cotton Candy Crackle",
-//   "Quarterback Crunch",
-//   "Chocolate Chocolate Chip Cheesecake",
-//   "Caramel 'n' Cookies"
-// ]
+ const regionalFlavors = [
+   "Pink Bubblegum",
+   "Caramel Macchiato",
+   "York Peppermint Pattie",
+   "Cotton Candy",
+   "Orange Sherbet",
+   "Grape Ice",
+   "Watermelon Ice",
+   "Miami Vice Sorbet",
+   "Splish Splash®",
+   "Wild 'n Reckless Sherbet",
+   "Lemon Custard",
+   "Oregon Blackberry",
+   "Bananas ‘n Strawberries",
+   "Mississippi Mud",
+   "Rum Raisin",
+   "Creole Cream Cheese",
+   "Chocolate Almond",
+   "Fudge Brownie",
+   "Banana Nut",
+   "Black Walnut",
+   "Cotton Candy Crackle",
+   "Quarterback Crunch",
+   "Chocolate Chocolate Chip Cheesecake",
+   "Caramel 'n' Cookies"
+ ]
+
+
+function getRandomFlavors(arr1,arr2,arr3,arr4) {
+  
+  const randomArr = [];
+  for (let i = 0; i < arr1.length; i++) {
+    randomArr.push(arr1[i]);
+  }
+  for (let i = 0; i < arr2.length; i++) {
+    randomArr.push(arr2[i]);
+  }
+  for (let i = 0; i < arr3.length; i++) {
+    randomArr.push(arr3[i]);
+  }
+  for (let i = 0; i < arr4.length; i++) {
+    randomArr.push(arr4[i]);
+  }
+  
+  let randomFlavors = [];
+  let index = 0;
+  for (let i = 0; i < 31; i++) {
+    index = Math.floor(Math.random() * randomArr.length);
+    randomFlavors.push(randomArr[index]);
+   
+    randomArr.splice(index,1); 
+    }
+
+  return randomFlavors;
+}
+
+const brandNewFlavors = getRandomFlavors(ogFlavors, newFlavors, seasonalFlavors, regionalFlavors);
+console.log(brandNewFlavors);
 
 
 
